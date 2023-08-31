@@ -1,0 +1,44 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           gen-gitignore
+version:        0.1.0.0
+synopsis:       Generate gitignores from the command line using https://www.toptal.com/developers/gitignore
+description:    Please see the README on GitHub at <https://github.com/0xmycf/gen-gitignore#readme>
+homepage:       https://github.com/0xmycf/gen-gitignore#readme
+bug-reports:    https://github.com/0xmycf/gen-gitignore/issues
+author:         0xmycf
+maintainer:     0xmycf
+copyright:      2023 0xmycf
+license:        MIT
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/0xmycf/gen-gitignore
+
+executable gen-gitignore
+  main-is: Main.hs
+  other-modules:
+      Paths_gen_gitignore
+  hs-source-dirs:
+      app
+  default-extensions:
+      BlockArguments
+      LambdaCase
+      OverloadedStrings
+      OverloadedLabels
+      ExplicitNamespaces
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  extra-libraries:
+      curl
+  build-depends:
+      base >=4.7 && <5
+    , directory
+    , process
+  default-language: GHC2021

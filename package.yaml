@@ -1,0 +1,39 @@
+version:             0.1.0.0
+author:              "0xmycf"
+name:                "gen-gitignore"
+github:              "0xmycf/gen-gitignore"
+license:             "MIT"
+synopsis:            "Generate gitignores from the command line using https://www.toptal.com/developers/gitignore"
+copyright:           "2023 0xmycf"
+homepage:            https://github.com/0xmycf/gen-gitignore#readme
+
+extra-source-files:
+- README.md          
+
+language: GHC2021
+default-extensions:
+  - BlockArguments
+  - LambdaCase
+  - OverloadedStrings
+  - OverloadedLabels
+  - ExplicitNamespaces
+
+description: Please see the README on GitHub at <https://github.com/0xmycf/gen-gitignore#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - directory
+  - process
+
+ghc-options:
+- -Wall
+
+executables:
+  gen-gitignore:
+    main:        Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    extra-libraries: curl

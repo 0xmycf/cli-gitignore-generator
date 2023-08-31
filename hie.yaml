@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "gen-gitignore:lib"
+
+    - path: "./app/Main.hs"
+      component: "gen-gitignore:exe:gen-gitignore-exe"
+
+    - path: "./test"
+      component: "gen-gitignore:test:gen-gitignore-test"
